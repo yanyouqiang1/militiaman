@@ -6,29 +6,21 @@
         <artifactId>militiaman_parent</artifactId>
         <groupId>com.yyq</groupId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>config</artifactId>
+    <artifactId>servicedemo</artifactId>
     <version>0.1.0</version>
     <packaging>jar</packaging>
-
-    <name>config</name>
-
     <properties>
         <docker.image.prefix>yyq</docker.image.prefix>
-        <start-class>service.ConfigApplication</start-class>
     </properties>
+
     <dependencies>
+        <!-- spring config-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter</artifactId>
-        </dependency>
-        <!--config server-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-config-server</artifactId>
+            <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
 
         <!-- consul discover-->
@@ -36,8 +28,12 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-consul-discovery</artifactId>
         </dependency>
-</dependencies>
 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+    </dependencies>
     <build>
         <plugins>
             <plugin>
