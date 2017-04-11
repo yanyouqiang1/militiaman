@@ -13,7 +13,7 @@ spring:
           search-paths:
           - data
     consul:
-      host: localhost
+      host: consul
       port: 8500
       enabled: true
       discovery:
@@ -22,3 +22,9 @@ spring:
         service-name: configServer
         health-check-path: /health
         health-check-interval: 10s
+
+  rabbitmq:
+    host: rabbitmq
+    port: 5672
+    username: user
+    password: password

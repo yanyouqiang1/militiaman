@@ -6,11 +6,11 @@ spring:
 
   cloud:
     config:
-        uri: http://localhost:8080
+        uri: configServer:8080
         name: servicedemo
 
     consul:
-      host: localhost
+      host: consul
       port: 8500
       enabled: true
       discovery:
@@ -19,3 +19,9 @@ spring:
         service-name: servicedemo
         health-check-path: /health
         health-check-interval: 10s
+
+  rabbitmq:
+    host: rabbitmq
+    port: 5672
+    username: user
+    password: password
