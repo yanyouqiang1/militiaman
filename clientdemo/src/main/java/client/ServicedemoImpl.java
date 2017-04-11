@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class ServicedemoImpl implements Servicedemo {
-
     @Autowired
     private Servicedemo demoService;
 
@@ -20,5 +19,15 @@ public class ServicedemoImpl implements Servicedemo {
     }
     public String servicefallback(){
         return "hystrix success!";
+    }
+
+
+    @Override
+    @HystrixCommand(fallbackMethod = "getwordfallback")
+    public String getword() {
+        return demoService.getword();
+    }
+    public String getwordfallback(){
+        return "get word fail";
     }
 }

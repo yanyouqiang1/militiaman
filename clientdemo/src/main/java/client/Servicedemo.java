@@ -11,5 +11,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public interface Servicedemo {
     @RequestMapping(value = "/",method = RequestMethod.GET)
     public String getService();
+
+    @RequestMapping(value = "/getword",method = RequestMethod.GET)
+    public String getword();
 }
 
