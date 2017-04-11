@@ -5,7 +5,7 @@
 2、配置环境变量到目录 https://www.consul.io/intro/getting-started/install.html	     
 3、简易模式启动 consul agent -dev    
 ## consul 客户端
-1、pom 文件     
+1、pom 文件中添加依赖    
 <dependencyManagement>
         <dependencies>
             <dependency>
