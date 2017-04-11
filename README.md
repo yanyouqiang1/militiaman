@@ -6,22 +6,20 @@
 3、简易模式启动 consul agent -dev    
 ## consul 客户端
 1、pom 文件中添加依赖    
-<dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-consul-dependencies</artifactId>
-                <version>1.0.1.RELEASE</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-</dependencyManagement>
-				<dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-actuator</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-consul-discovery</artifactId>
-        </dependency>
+      spring-cloud-starter-consul-discovery
+      spring-boot-starter-actuator   一般在父pom中添加
+2、 bootstrap 配置文件 
+spring:
+   consul:
+      host: consul //服务端地址，docker与之对应
+      port: 8500 //端口，默认
+      enabled: true
+      discovery:
+        enabled: true
+        instance-id: gateway
+        service-name: gateway
+        health-check-path: /health
+        health-check-interval: 10s
+3、 主类文件
+  加上 @EnableDiscoveryClient
+## config 服务端
