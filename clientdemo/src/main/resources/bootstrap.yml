@@ -6,7 +6,7 @@ spring:
 
   cloud:
     config:
-        uri: configServer:8080
+        uri: http://configServer:8080
         name: clientdemo
 
     consul:
