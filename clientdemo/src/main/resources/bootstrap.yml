@@ -1,13 +1,13 @@
 server:
-  port: 7777
+  port: 9988
 spring:
   application:
-    name: servicedemo
+    name: clientdemo
 
   cloud:
     config:
         uri: http://localhost:8080
-        name: servicedemo
+        name: clientdemo
 
     consul:
       host: localhost
@@ -15,7 +15,8 @@ spring:
       enabled: true
       discovery:
         enabled: true
-        instance-id: servicedemo
-        service-name: servicedemo
+        instance-id: clientdemo
+        service-name: clientdemo
         health-check-path: /health
         health-check-interval: 10s
+
