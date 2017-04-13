@@ -5,7 +5,7 @@
 2、配置环境变量到目录 https://www.consul.io/intro/getting-started/install.html	     
 3、简易模式启动 consul agent -dev    
 ## consul 客户端
-1、pom 文件中添加依赖  <br>
+1、pom 文件中添加依赖 <br>
 spring-cloud-starter-consul-discovery<br>
 spring-boot-starter-actuator 一般在父pom中添加<br>
 2、 bootstrap 配置文件 <br>

@@ -6,7 +6,7 @@ spring:
 
   cloud:
     config:
-        uri: http://configServer:8080
+        uri: http://172.18.218.252:8001
         name: servicedemo
 
     consul:
