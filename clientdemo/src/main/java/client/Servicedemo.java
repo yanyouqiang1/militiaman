@@ -14,5 +14,8 @@ public interface Servicedemo {
 
     @RequestMapping(value = "/getword",method = RequestMethod.GET)
     public String getword();
+
+    @RequestMapping(value = "/ip",method = RequestMethod.GET)
+    public String getIP();
 }
 

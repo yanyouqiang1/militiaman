@@ -30,4 +30,13 @@ public class ServicedemoImpl implements Servicedemo {
     public String getwordfallback(){
         return "get word fail";
     }
+
+    @Override
+    @HystrixCommand(fallbackMethod = "getipfallback")
+    public String getIP() {
+        return demoService.getIP();
+    }
+    public String getipfallback(){
+        return "get ip fail";
+    }
 }

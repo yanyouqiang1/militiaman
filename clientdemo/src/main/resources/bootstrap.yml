@@ -8,9 +8,11 @@ spring:
     config:
         uri: http://172.18.218.252:8001
         name: clientdemo
+#        uri: http://configServer:8080
 
     consul:
-      host: consul
+#      host: consul
+      host: localhost
       port: 8500
       enabled: true
       discovery:
@@ -19,9 +21,9 @@ spring:
         service-name: clientdemo
         health-check-path: /health
         health-check-interval: 10s
-  rabbitmq:
-    host: rabbitmq
-    port: 5672
-    username: user
-    password: password
+#  rabbitmq:
+#    host: rabbitmq
+#    port: 5672
+#    username: user
+#    password: password
 
